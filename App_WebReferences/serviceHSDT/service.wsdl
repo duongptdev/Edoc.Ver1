@@ -1,0 +1,3198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LaythongtinReq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaythongtinReqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaythongtinReqResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDReq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDReqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDReqResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matkhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRequestInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBase64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBase64Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBase64Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBase64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBase64Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateBase64Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadReq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadReqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadReqResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cert" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadCertResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateKythamdinh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="thamdinh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateKythamdinhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateKythamdinhResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckHasDevID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckHasDevIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckHasDevIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRegID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="device_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRegIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateRegIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChechIDCTSDadangky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChechIDCTSDadangkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChechIDCTSDadangkyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertTempRemote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="devid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertTempRemoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertTempRemoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="USendNoitificationIOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="regid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="USendNoitificationIOSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="USendNoitificationIOSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerialFromIDCTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerialFromIDCTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSerialFromIDCTSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerialFromIDCTS_deviceIDTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSerialFromIDCTS_deviceIDTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSerialFromIDCTS_deviceIDTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDCTSFromSerial_deviceIDTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDCTSFromSerial_deviceIDTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDCTSFromSerial_deviceIDTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDeviceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="device_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDeviceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertDeviceIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="device_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetupPin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetupPinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetupPinResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDeviceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="device_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDeviceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDeviceIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPinCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPinCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDCTSFromDevID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIDCTSFromDevIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIDCTSFromDevIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDevIDFromSerial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDevIDFromSerialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDevIDFromSerialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegIDFromDevID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegIDFromDevIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegIDFromDevIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mac_address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versioncode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFileHSM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MacAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="base64_cert" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFileHSMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFileHSMResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPassfromSerial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPassfromSerialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPassfromSerialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSMFileFromIDCTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mac_address" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHSMFileFromIDCTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHSMFileFromIDCTSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterPC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MacAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterPCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterPCResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDSRq">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDSRqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDSRqResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDSRq_vcdc">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDSRq_vcdcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDSRq_vcdcResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddInstallCTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddInstallCTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddInstallCTSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDSInstall">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDSInstallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDSInstallResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newpass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePasswordResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetoldPass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetoldPassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetoldPassResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LaythongtinReqSoapIn">
+    <wsdl:part name="parameters" element="tns:LaythongtinReq" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtinReqSoapOut">
+    <wsdl:part name="parameters" element="tns:LaythongtinReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64SoapIn">
+    <wsdl:part name="parameters" element="tns:GetBase64" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64SoapOut">
+    <wsdl:part name="parameters" element="tns:GetBase64Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBase64" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBase64Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadReq" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCertSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCert" />
+  </wsdl:message>
+  <wsdl:message name="GetCertSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadCert" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateKythamdinh" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateKythamdinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckHasDevID" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckHasDevIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRegID" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkySoapIn">
+    <wsdl:part name="parameters" element="tns:ChechIDCTSDadangky" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkySoapOut">
+    <wsdl:part name="parameters" element="tns:ChechIDCTSDadangkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertTempRemote" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertTempRemoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSSoapIn">
+    <wsdl:part name="parameters" element="tns:USendNoitificationIOS" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSSoapOut">
+    <wsdl:part name="parameters" element="tns:USendNoitificationIOSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerialFromIDCTS" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerialFromIDCTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSerialFromIDCTS_deviceIDTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSerialFromIDCTS_deviceIDTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDCTSFromSerial_deviceIDTable" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDCTSFromSerial_deviceIDTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDeviceID" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDeviceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceID" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinSoapIn">
+    <wsdl:part name="parameters" element="tns:SetupPin" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinSoapOut">
+    <wsdl:part name="parameters" element="tns:SetupPinResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDeviceID" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDeviceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPinCode" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPinCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIDCTSFromDevID" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIDCTSFromDevIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDevIDFromSerial" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDevIDFromSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegIDFromDevID" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegIDFromDevIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckLogin" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFileHSM" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFileHSMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPassfromSerial" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPassfromSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHSMFileFromIDCTS" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHSMFileFromIDCTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterPC" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterPCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRqSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDSRq" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRqSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDSRqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRq_vcdcSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDSRq_vcdc" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRq_vcdcSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDSRq_vcdcResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSSoapIn">
+    <wsdl:part name="parameters" element="tns:AddInstallCTS" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSSoapOut">
+    <wsdl:part name="parameters" element="tns:AddInstallCTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDSInstallSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDSInstall" />
+  </wsdl:message>
+  <wsdl:message name="GetDSInstallSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDSInstallResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassSoapIn">
+    <wsdl:part name="parameters" element="tns:GetoldPass" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassSoapOut">
+    <wsdl:part name="parameters" element="tns:GetoldPassResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtinReqHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtinReqHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqHttpGetIn">
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64HttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="loai" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64HttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="base64" type="s:string" />
+    <wsdl:part name="loai" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCertHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCertHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="Cert" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="thamdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDHttpGetIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDHttpGetIn">
+    <wsdl:part name="device_id" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkyHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSHttpGetIn">
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableHttpGetIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="device_id" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="device_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinHttpGetIn">
+    <wsdl:part name="devid" type="s:string" />
+    <wsdl:part name="pin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDHttpGetIn">
+    <wsdl:part name="device_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeHttpGetIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDHttpGetIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialHttpGetIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDHttpGetIn">
+    <wsdl:part name="devID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="mac_address" type="s:string" />
+    <wsdl:part name="versioncode" type="s:string" />
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="MacAddress" type="s:string" />
+    <wsdl:part name="base64_cert" type="s:string" />
+    <wsdl:part name="FilePass" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="mac_address" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="MacAddress" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRqHttpGetIn" />
+  <wsdl:message name="GetDSRqHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRq_vcdcHttpGetIn" />
+  <wsdl:message name="GetDSRq_vcdcHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSHttpGetIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDSInstallHttpGetIn" />
+  <wsdl:message name="GetDSInstallHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="newpass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassHttpGetIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtinReqHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtinReqHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqHttpPostIn">
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDReqHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64HttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="loai" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBase64HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64HttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="base64" type="s:string" />
+    <wsdl:part name="loai" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBase64HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="request" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadReqHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCertHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCertHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="Cert" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadCertHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="thamdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateKythamdinhHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDHttpPostIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckHasDevIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDHttpPostIn">
+    <wsdl:part name="device_id" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkyHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChechIDCTSDadangkyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertTempRemoteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSHttpPostIn">
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="USendNoitificationIOSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSerialFromIDCTS_deviceIDTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableHttpPostIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromSerial_deviceIDTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="device_id" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="regid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDeviceIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="device_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinHttpPostIn">
+    <wsdl:part name="devid" type="s:string" />
+    <wsdl:part name="pin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetupPinHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDHttpPostIn">
+    <wsdl:part name="device_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeviceIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeHttpPostIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPinCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDHttpPostIn">
+    <wsdl:part name="devid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetIDCTSFromDevIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialHttpPostIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIDFromSerialHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDHttpPostIn">
+    <wsdl:part name="devID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegIDFromDevIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="mac_address" type="s:string" />
+    <wsdl:part name="versioncode" type="s:string" />
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="MacAddress" type="s:string" />
+    <wsdl:part name="base64_cert" type="s:string" />
+    <wsdl:part name="FilePass" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileHSMHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPassfromSerialHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="mac_address" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHSMFileFromIDCTSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="MacAddress" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RegisterPCHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRqHttpPostIn" />
+  <wsdl:message name="GetDSRqHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetDSRq_vcdcHttpPostIn" />
+  <wsdl:message name="GetDSRq_vcdcHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSHttpPostIn">
+    <wsdl:part name="serial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddInstallCTSHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDSInstallHttpPostIn" />
+  <wsdl:message name="GetDSInstallHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="Username" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="newpass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassHttpPostIn">
+    <wsdl:part name="idcts" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetoldPassHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="serviceSoap">
+    <wsdl:operation name="LaythongtinReq">
+      <wsdl:input message="tns:LaythongtinReqSoapIn" />
+      <wsdl:output message="tns:LaythongtinReqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <wsdl:input message="tns:GetIDReqSoapIn" />
+      <wsdl:output message="tns:GetIDReqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <wsdl:input message="tns:GetRequestInfoSoapIn" />
+      <wsdl:output message="tns:GetRequestInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <wsdl:input message="tns:GetBase64SoapIn" />
+      <wsdl:output message="tns:GetBase64SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <wsdl:input message="tns:UpdateBase64SoapIn" />
+      <wsdl:output message="tns:UpdateBase64SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <wsdl:input message="tns:UploadReqSoapIn" />
+      <wsdl:output message="tns:UploadReqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <wsdl:input message="tns:GetCertSoapIn" />
+      <wsdl:output message="tns:GetCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <wsdl:input message="tns:UploadCertSoapIn" />
+      <wsdl:output message="tns:UploadCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <wsdl:input message="tns:UpdateKythamdinhSoapIn" />
+      <wsdl:output message="tns:UpdateKythamdinhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <wsdl:input message="tns:CheckHasDevIDSoapIn" />
+      <wsdl:output message="tns:CheckHasDevIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <wsdl:input message="tns:UpdateRegIDSoapIn" />
+      <wsdl:output message="tns:UpdateRegIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <wsdl:input message="tns:ChechIDCTSDadangkySoapIn" />
+      <wsdl:output message="tns:ChechIDCTSDadangkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <wsdl:input message="tns:InsertTempRemoteSoapIn" />
+      <wsdl:output message="tns:InsertTempRemoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <wsdl:input message="tns:USendNoitificationIOSSoapIn" />
+      <wsdl:output message="tns:USendNoitificationIOSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <wsdl:input message="tns:GetSerialFromIDCTSSoapIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <wsdl:input message="tns:GetSerialFromIDCTS_deviceIDTableSoapIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTS_deviceIDTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <wsdl:input message="tns:GetIDCTSFromSerial_deviceIDTableSoapIn" />
+      <wsdl:output message="tns:GetIDCTSFromSerial_deviceIDTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <wsdl:input message="tns:InsertDeviceIDSoapIn" />
+      <wsdl:output message="tns:InsertDeviceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <wsdl:input message="tns:UpdateDeviceIDSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <wsdl:input message="tns:SetupPinSoapIn" />
+      <wsdl:output message="tns:SetupPinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <wsdl:input message="tns:CheckDeviceIDSoapIn" />
+      <wsdl:output message="tns:CheckDeviceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <wsdl:input message="tns:GetPinCodeSoapIn" />
+      <wsdl:output message="tns:GetPinCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <wsdl:input message="tns:GetInfoSoapIn" />
+      <wsdl:output message="tns:GetInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <wsdl:input message="tns:GetIDCTSFromDevIDSoapIn" />
+      <wsdl:output message="tns:GetIDCTSFromDevIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <wsdl:input message="tns:GetDevIDFromSerialSoapIn" />
+      <wsdl:output message="tns:GetDevIDFromSerialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <wsdl:input message="tns:GetRegIDFromDevIDSoapIn" />
+      <wsdl:output message="tns:GetRegIDFromDevIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <wsdl:input message="tns:CheckLoginSoapIn" />
+      <wsdl:output message="tns:CheckLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <wsdl:input message="tns:UpdateFileHSMSoapIn" />
+      <wsdl:output message="tns:UpdateFileHSMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <wsdl:input message="tns:GetPassfromSerialSoapIn" />
+      <wsdl:output message="tns:GetPassfromSerialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <wsdl:input message="tns:GetHSMFileFromIDCTSSoapIn" />
+      <wsdl:output message="tns:GetHSMFileFromIDCTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <wsdl:input message="tns:RegisterPCSoapIn" />
+      <wsdl:output message="tns:RegisterPCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <wsdl:input message="tns:GetDSRqSoapIn" />
+      <wsdl:output message="tns:GetDSRqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <wsdl:input message="tns:GetDSRq_vcdcSoapIn" />
+      <wsdl:output message="tns:GetDSRq_vcdcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <wsdl:input message="tns:AddInstallCTSSoapIn" />
+      <wsdl:output message="tns:AddInstallCTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <wsdl:input message="tns:GetDSInstallSoapIn" />
+      <wsdl:output message="tns:GetDSInstallSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordSoapIn" />
+      <wsdl:output message="tns:UpdatePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <wsdl:input message="tns:GetoldPassSoapIn" />
+      <wsdl:output message="tns:GetoldPassSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="serviceHttpGet">
+    <wsdl:operation name="LaythongtinReq">
+      <wsdl:input message="tns:LaythongtinReqHttpGetIn" />
+      <wsdl:output message="tns:LaythongtinReqHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <wsdl:input message="tns:GetIDReqHttpGetIn" />
+      <wsdl:output message="tns:GetIDReqHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <wsdl:input message="tns:GetRequestInfoHttpGetIn" />
+      <wsdl:output message="tns:GetRequestInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <wsdl:input message="tns:GetBase64HttpGetIn" />
+      <wsdl:output message="tns:GetBase64HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <wsdl:input message="tns:UpdateBase64HttpGetIn" />
+      <wsdl:output message="tns:UpdateBase64HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <wsdl:input message="tns:UploadReqHttpGetIn" />
+      <wsdl:output message="tns:UploadReqHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <wsdl:input message="tns:GetCertHttpGetIn" />
+      <wsdl:output message="tns:GetCertHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <wsdl:input message="tns:UploadCertHttpGetIn" />
+      <wsdl:output message="tns:UploadCertHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <wsdl:input message="tns:UpdateKythamdinhHttpGetIn" />
+      <wsdl:output message="tns:UpdateKythamdinhHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <wsdl:input message="tns:CheckHasDevIDHttpGetIn" />
+      <wsdl:output message="tns:CheckHasDevIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <wsdl:input message="tns:UpdateRegIDHttpGetIn" />
+      <wsdl:output message="tns:UpdateRegIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <wsdl:input message="tns:ChechIDCTSDadangkyHttpGetIn" />
+      <wsdl:output message="tns:ChechIDCTSDadangkyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <wsdl:input message="tns:InsertTempRemoteHttpGetIn" />
+      <wsdl:output message="tns:InsertTempRemoteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <wsdl:input message="tns:USendNoitificationIOSHttpGetIn" />
+      <wsdl:output message="tns:USendNoitificationIOSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <wsdl:input message="tns:GetSerialFromIDCTSHttpGetIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <wsdl:input message="tns:GetSerialFromIDCTS_deviceIDTableHttpGetIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTS_deviceIDTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <wsdl:input message="tns:GetIDCTSFromSerial_deviceIDTableHttpGetIn" />
+      <wsdl:output message="tns:GetIDCTSFromSerial_deviceIDTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <wsdl:input message="tns:InsertDeviceIDHttpGetIn" />
+      <wsdl:output message="tns:InsertDeviceIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <wsdl:input message="tns:UpdateDeviceIDHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <wsdl:input message="tns:SetupPinHttpGetIn" />
+      <wsdl:output message="tns:SetupPinHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <wsdl:input message="tns:CheckDeviceIDHttpGetIn" />
+      <wsdl:output message="tns:CheckDeviceIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <wsdl:input message="tns:GetPinCodeHttpGetIn" />
+      <wsdl:output message="tns:GetPinCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <wsdl:input message="tns:GetInfoHttpGetIn" />
+      <wsdl:output message="tns:GetInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <wsdl:input message="tns:GetIDCTSFromDevIDHttpGetIn" />
+      <wsdl:output message="tns:GetIDCTSFromDevIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <wsdl:input message="tns:GetDevIDFromSerialHttpGetIn" />
+      <wsdl:output message="tns:GetDevIDFromSerialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <wsdl:input message="tns:GetRegIDFromDevIDHttpGetIn" />
+      <wsdl:output message="tns:GetRegIDFromDevIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <wsdl:input message="tns:CheckLoginHttpGetIn" />
+      <wsdl:output message="tns:CheckLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <wsdl:input message="tns:UpdateFileHSMHttpGetIn" />
+      <wsdl:output message="tns:UpdateFileHSMHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <wsdl:input message="tns:GetPassfromSerialHttpGetIn" />
+      <wsdl:output message="tns:GetPassfromSerialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <wsdl:input message="tns:GetHSMFileFromIDCTSHttpGetIn" />
+      <wsdl:output message="tns:GetHSMFileFromIDCTSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <wsdl:input message="tns:RegisterPCHttpGetIn" />
+      <wsdl:output message="tns:RegisterPCHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <wsdl:input message="tns:GetDSRqHttpGetIn" />
+      <wsdl:output message="tns:GetDSRqHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <wsdl:input message="tns:GetDSRq_vcdcHttpGetIn" />
+      <wsdl:output message="tns:GetDSRq_vcdcHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <wsdl:input message="tns:AddInstallCTSHttpGetIn" />
+      <wsdl:output message="tns:AddInstallCTSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <wsdl:input message="tns:GetDSInstallHttpGetIn" />
+      <wsdl:output message="tns:GetDSInstallHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordHttpGetIn" />
+      <wsdl:output message="tns:UpdatePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <wsdl:input message="tns:GetoldPassHttpGetIn" />
+      <wsdl:output message="tns:GetoldPassHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="serviceHttpPost">
+    <wsdl:operation name="LaythongtinReq">
+      <wsdl:input message="tns:LaythongtinReqHttpPostIn" />
+      <wsdl:output message="tns:LaythongtinReqHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <wsdl:input message="tns:GetIDReqHttpPostIn" />
+      <wsdl:output message="tns:GetIDReqHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <wsdl:input message="tns:GetRequestInfoHttpPostIn" />
+      <wsdl:output message="tns:GetRequestInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <wsdl:input message="tns:GetBase64HttpPostIn" />
+      <wsdl:output message="tns:GetBase64HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <wsdl:input message="tns:UpdateBase64HttpPostIn" />
+      <wsdl:output message="tns:UpdateBase64HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <wsdl:input message="tns:UploadReqHttpPostIn" />
+      <wsdl:output message="tns:UploadReqHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <wsdl:input message="tns:GetCertHttpPostIn" />
+      <wsdl:output message="tns:GetCertHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <wsdl:input message="tns:UploadCertHttpPostIn" />
+      <wsdl:output message="tns:UploadCertHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <wsdl:input message="tns:UpdateKythamdinhHttpPostIn" />
+      <wsdl:output message="tns:UpdateKythamdinhHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <wsdl:input message="tns:CheckHasDevIDHttpPostIn" />
+      <wsdl:output message="tns:CheckHasDevIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <wsdl:input message="tns:UpdateRegIDHttpPostIn" />
+      <wsdl:output message="tns:UpdateRegIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <wsdl:input message="tns:ChechIDCTSDadangkyHttpPostIn" />
+      <wsdl:output message="tns:ChechIDCTSDadangkyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <wsdl:input message="tns:InsertTempRemoteHttpPostIn" />
+      <wsdl:output message="tns:InsertTempRemoteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <wsdl:input message="tns:USendNoitificationIOSHttpPostIn" />
+      <wsdl:output message="tns:USendNoitificationIOSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <wsdl:input message="tns:GetSerialFromIDCTSHttpPostIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <wsdl:input message="tns:GetSerialFromIDCTS_deviceIDTableHttpPostIn" />
+      <wsdl:output message="tns:GetSerialFromIDCTS_deviceIDTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <wsdl:input message="tns:GetIDCTSFromSerial_deviceIDTableHttpPostIn" />
+      <wsdl:output message="tns:GetIDCTSFromSerial_deviceIDTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <wsdl:input message="tns:InsertDeviceIDHttpPostIn" />
+      <wsdl:output message="tns:InsertDeviceIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <wsdl:input message="tns:UpdateDeviceIDHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <wsdl:input message="tns:SetupPinHttpPostIn" />
+      <wsdl:output message="tns:SetupPinHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <wsdl:input message="tns:CheckDeviceIDHttpPostIn" />
+      <wsdl:output message="tns:CheckDeviceIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <wsdl:input message="tns:GetPinCodeHttpPostIn" />
+      <wsdl:output message="tns:GetPinCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <wsdl:input message="tns:GetInfoHttpPostIn" />
+      <wsdl:output message="tns:GetInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <wsdl:input message="tns:GetIDCTSFromDevIDHttpPostIn" />
+      <wsdl:output message="tns:GetIDCTSFromDevIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <wsdl:input message="tns:GetDevIDFromSerialHttpPostIn" />
+      <wsdl:output message="tns:GetDevIDFromSerialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <wsdl:input message="tns:GetRegIDFromDevIDHttpPostIn" />
+      <wsdl:output message="tns:GetRegIDFromDevIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <wsdl:input message="tns:CheckLoginHttpPostIn" />
+      <wsdl:output message="tns:CheckLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <wsdl:input message="tns:UpdateFileHSMHttpPostIn" />
+      <wsdl:output message="tns:UpdateFileHSMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <wsdl:input message="tns:GetPassfromSerialHttpPostIn" />
+      <wsdl:output message="tns:GetPassfromSerialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <wsdl:input message="tns:GetHSMFileFromIDCTSHttpPostIn" />
+      <wsdl:output message="tns:GetHSMFileFromIDCTSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <wsdl:input message="tns:RegisterPCHttpPostIn" />
+      <wsdl:output message="tns:RegisterPCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <wsdl:input message="tns:GetDSRqHttpPostIn" />
+      <wsdl:output message="tns:GetDSRqHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <wsdl:input message="tns:GetDSRq_vcdcHttpPostIn" />
+      <wsdl:output message="tns:GetDSRq_vcdcHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <wsdl:input message="tns:AddInstallCTSHttpPostIn" />
+      <wsdl:output message="tns:AddInstallCTSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <wsdl:input message="tns:GetDSInstallHttpPostIn" />
+      <wsdl:output message="tns:GetDSInstallHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordHttpPostIn" />
+      <wsdl:output message="tns:UpdatePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <wsdl:input message="tns:GetoldPassHttpPostIn" />
+      <wsdl:output message="tns:GetoldPassHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="serviceSoap" type="tns:serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LaythongtinReq">
+      <soap:operation soapAction="http://tempuri.org/LaythongtinReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <soap:operation soapAction="http://tempuri.org/GetIDReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <soap:operation soapAction="http://tempuri.org/GetRequestInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <soap:operation soapAction="http://tempuri.org/GetBase64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <soap:operation soapAction="http://tempuri.org/UpdateBase64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <soap:operation soapAction="http://tempuri.org/UploadReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <soap:operation soapAction="http://tempuri.org/GetCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <soap:operation soapAction="http://tempuri.org/UploadCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <soap:operation soapAction="http://tempuri.org/UpdateKythamdinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <soap:operation soapAction="http://tempuri.org/CheckHasDevID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <soap:operation soapAction="http://tempuri.org/UpdateRegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <soap:operation soapAction="http://tempuri.org/ChechIDCTSDadangky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <soap:operation soapAction="http://tempuri.org/InsertTempRemote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <soap:operation soapAction="http://tempuri.org/USendNoitificationIOS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <soap:operation soapAction="http://tempuri.org/GetSerialFromIDCTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <soap:operation soapAction="http://tempuri.org/GetSerialFromIDCTS_deviceIDTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <soap:operation soapAction="http://tempuri.org/GetIDCTSFromSerial_deviceIDTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <soap:operation soapAction="http://tempuri.org/InsertDeviceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <soap:operation soapAction="http://tempuri.org/UpdateDeviceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <soap:operation soapAction="http://tempuri.org/SetupPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <soap:operation soapAction="http://tempuri.org/CheckDeviceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <soap:operation soapAction="http://tempuri.org/GetPinCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <soap:operation soapAction="http://tempuri.org/GetInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <soap:operation soapAction="http://tempuri.org/GetIDCTSFromDevID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <soap:operation soapAction="http://tempuri.org/GetDevIDFromSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <soap:operation soapAction="http://tempuri.org/GetRegIDFromDevID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <soap:operation soapAction="http://tempuri.org/CheckLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <soap:operation soapAction="http://tempuri.org/UpdateFileHSM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <soap:operation soapAction="http://tempuri.org/GetPassfromSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <soap:operation soapAction="http://tempuri.org/GetHSMFileFromIDCTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <soap:operation soapAction="http://tempuri.org/RegisterPC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <soap:operation soapAction="http://tempuri.org/GetDSRq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <soap:operation soapAction="http://tempuri.org/GetDSRq_vcdc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <soap:operation soapAction="http://tempuri.org/AddInstallCTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <soap:operation soapAction="http://tempuri.org/GetDSInstall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <soap:operation soapAction="http://tempuri.org/GetoldPass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serviceSoap12" type="tns:serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LaythongtinReq">
+      <soap12:operation soapAction="http://tempuri.org/LaythongtinReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <soap12:operation soapAction="http://tempuri.org/GetIDReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <soap12:operation soapAction="http://tempuri.org/GetBase64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBase64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <soap12:operation soapAction="http://tempuri.org/UploadReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <soap12:operation soapAction="http://tempuri.org/GetCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <soap12:operation soapAction="http://tempuri.org/UploadCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <soap12:operation soapAction="http://tempuri.org/UpdateKythamdinh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <soap12:operation soapAction="http://tempuri.org/CheckHasDevID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRegID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <soap12:operation soapAction="http://tempuri.org/ChechIDCTSDadangky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <soap12:operation soapAction="http://tempuri.org/InsertTempRemote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <soap12:operation soapAction="http://tempuri.org/USendNoitificationIOS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <soap12:operation soapAction="http://tempuri.org/GetSerialFromIDCTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <soap12:operation soapAction="http://tempuri.org/GetSerialFromIDCTS_deviceIDTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <soap12:operation soapAction="http://tempuri.org/GetIDCTSFromSerial_deviceIDTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <soap12:operation soapAction="http://tempuri.org/InsertDeviceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDeviceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <soap12:operation soapAction="http://tempuri.org/SetupPin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <soap12:operation soapAction="http://tempuri.org/CheckDeviceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <soap12:operation soapAction="http://tempuri.org/GetPinCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <soap12:operation soapAction="http://tempuri.org/GetIDCTSFromDevID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <soap12:operation soapAction="http://tempuri.org/GetDevIDFromSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <soap12:operation soapAction="http://tempuri.org/GetRegIDFromDevID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <soap12:operation soapAction="http://tempuri.org/CheckLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <soap12:operation soapAction="http://tempuri.org/UpdateFileHSM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <soap12:operation soapAction="http://tempuri.org/GetPassfromSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <soap12:operation soapAction="http://tempuri.org/GetHSMFileFromIDCTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <soap12:operation soapAction="http://tempuri.org/RegisterPC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <soap12:operation soapAction="http://tempuri.org/GetDSRq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <soap12:operation soapAction="http://tempuri.org/GetDSRq_vcdc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <soap12:operation soapAction="http://tempuri.org/AddInstallCTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <soap12:operation soapAction="http://tempuri.org/GetDSInstall" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <soap12:operation soapAction="http://tempuri.org/GetoldPass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serviceHttpGet" type="tns:serviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="LaythongtinReq">
+      <http:operation location="/LaythongtinReq" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <http:operation location="/GetIDReq" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <http:operation location="/GetRequestInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <http:operation location="/GetBase64" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <http:operation location="/UpdateBase64" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <http:operation location="/UploadReq" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <http:operation location="/GetCert" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <http:operation location="/UploadCert" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <http:operation location="/UpdateKythamdinh" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <http:operation location="/CheckHasDevID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <http:operation location="/UpdateRegID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <http:operation location="/ChechIDCTSDadangky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <http:operation location="/InsertTempRemote" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <http:operation location="/USendNoitificationIOS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <http:operation location="/GetSerialFromIDCTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <http:operation location="/GetSerialFromIDCTS_deviceIDTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <http:operation location="/GetIDCTSFromSerial_deviceIDTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <http:operation location="/InsertDeviceID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <http:operation location="/UpdateDeviceID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <http:operation location="/SetupPin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <http:operation location="/CheckDeviceID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <http:operation location="/GetPinCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <http:operation location="/GetInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <http:operation location="/GetIDCTSFromDevID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <http:operation location="/GetDevIDFromSerial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <http:operation location="/GetRegIDFromDevID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <http:operation location="/CheckLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <http:operation location="/UpdateFileHSM" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <http:operation location="/GetPassfromSerial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <http:operation location="/GetHSMFileFromIDCTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <http:operation location="/RegisterPC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <http:operation location="/GetDSRq" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <http:operation location="/GetDSRq_vcdc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <http:operation location="/AddInstallCTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <http:operation location="/GetDSInstall" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <http:operation location="/UpdatePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <http:operation location="/GetoldPass" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serviceHttpPost" type="tns:serviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="LaythongtinReq">
+      <http:operation location="/LaythongtinReq" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDReq">
+      <http:operation location="/GetIDReq" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestInfo">
+      <http:operation location="/GetRequestInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBase64">
+      <http:operation location="/GetBase64" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBase64">
+      <http:operation location="/UpdateBase64" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadReq">
+      <http:operation location="/UploadReq" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCert">
+      <http:operation location="/GetCert" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCert">
+      <http:operation location="/UploadCert" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKythamdinh">
+      <http:operation location="/UpdateKythamdinh" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHasDevID">
+      <http:operation location="/CheckHasDevID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegID">
+      <http:operation location="/UpdateRegID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChechIDCTSDadangky">
+      <http:operation location="/ChechIDCTSDadangky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTempRemote">
+      <http:operation location="/InsertTempRemote" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USendNoitificationIOS">
+      <http:operation location="/USendNoitificationIOS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS">
+      <http:operation location="/GetSerialFromIDCTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialFromIDCTS_deviceIDTable">
+      <http:operation location="/GetSerialFromIDCTS_deviceIDTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromSerial_deviceIDTable">
+      <http:operation location="/GetIDCTSFromSerial_deviceIDTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDeviceID">
+      <http:operation location="/InsertDeviceID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceID">
+      <http:operation location="/UpdateDeviceID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetupPin">
+      <http:operation location="/SetupPin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeviceID">
+      <http:operation location="/CheckDeviceID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <http:operation location="/GetPinCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <http:operation location="/GetInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIDCTSFromDevID">
+      <http:operation location="/GetIDCTSFromDevID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIDFromSerial">
+      <http:operation location="/GetDevIDFromSerial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegIDFromDevID">
+      <http:operation location="/GetRegIDFromDevID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLogin">
+      <http:operation location="/CheckLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileHSM">
+      <http:operation location="/UpdateFileHSM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassfromSerial">
+      <http:operation location="/GetPassfromSerial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSMFileFromIDCTS">
+      <http:operation location="/GetHSMFileFromIDCTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPC">
+      <http:operation location="/RegisterPC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq">
+      <http:operation location="/GetDSRq" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSRq_vcdc">
+      <http:operation location="/GetDSRq_vcdc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstallCTS">
+      <http:operation location="/AddInstallCTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDSInstall">
+      <http:operation location="/GetDSInstall" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <http:operation location="/UpdatePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetoldPass">
+      <http:operation location="/GetoldPass" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="serviceSoap" binding="tns:serviceSoap">
+      <soap:address location="http://27.118.16.148:8002/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serviceSoap12" binding="tns:serviceSoap12">
+      <soap12:address location="http://27.118.16.148:8002/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serviceHttpGet" binding="tns:serviceHttpGet">
+      <http:address location="http://27.118.16.148:8002/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serviceHttpPost" binding="tns:serviceHttpPost">
+      <http:address location="http://27.118.16.148:8002/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

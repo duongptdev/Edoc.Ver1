@@ -1,0 +1,2532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emailnhan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CCMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tieude" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dangky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TTDangky" type="tns:clDangky" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clDangky">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sodienthoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Masothue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tentochuc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DangkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DangkyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoTKphien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TTDangky" type="tns:clDangky" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoTKphienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TaoTKphienResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kichhoattaikhoan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KichhoattaikhoanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KichhoattaikhoanResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Doimatkhau">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matkhaucu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matkhaumoi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoimatkhauResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoimatkhauResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapmatkhau">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matkhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThietlapmatkhauResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ThietlapmatkhauResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dangnhap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matkhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DangnhapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DangnhapResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laythongtintaikhoan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaythongtintaikhoanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaythongtintaikhoanResult" type="tns:clTTTaikhoan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clTTTaikhoan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idTaikhoan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Matkhau" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sodienthoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Masothue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tentochuc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoCMT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Diachi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Trangthai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhanloaiTK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ngaykichhoat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ngaytruycapcuoi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Countcheck" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Matkhaumacdinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgaydoiMK" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckDL" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaoVB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TenVBGoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vitriluu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoantao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="phanloaivb" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoVBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TaoVBResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlaptaikhoanky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFile" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoanky" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Trinhtuky" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hinhthucky" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoantao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThietlaptaikhoankyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ThietlaptaikhoankyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapvungky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFile" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoanky" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Trinhtuky" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hinhthucky" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Trangky" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Toadodau" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Toadocuoi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mamauvungky" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoantao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThietlapvungkyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ThietlapvungkyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuiVB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFile" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoanthuchien" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuiVBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GuiVBResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapphuongthuckymobilesign_IDCTS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idcts" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="macdinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapphuongthuckymobilesign_IDCTSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Thietlapphuongthuckymobilesign_IDCTSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapphuongthuckymobilesign_Serial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="macdinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapphuongthuckymobilesign_SerialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Thietlapphuongthuckymobilesign_SerialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Thietlapphuongthuckytoken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="macdinh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThietlapphuongthuckytokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ThietlapphuongthuckytokenResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laythietlapphuongthuckysomacdinh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaythietlapphuongthuckysomacdinhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaythietlapphuongthuckysomacdinhResult" type="tns:clThietlapphuongthucky" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clThietlapphuongthucky">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idTaikhoan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idSetup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phuongthucky" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Serialno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCTS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vitriluu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Macdinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thoigianthietlap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckDL" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Pheky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFile" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoanky" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Noidungphe" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Trangphe" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Toadodau" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Toadocuoi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vitriluu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PhekyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PhekyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KyVB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFile" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoanky" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Phuongthucky" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="trinhtuky" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KyVBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KyVBResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBDatao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBDataoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDSVBDataoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBNhan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBNhanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDSVBNhanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBNhan_pheky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSVBNhan_phekyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDSVBNhan_phekyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaylogVB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaylogVBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaylogVBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilename">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilenameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilenameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoYCKy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Taikhoan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Linkfile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Info" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoYCKyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TaoYCKyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Capnhatketquaky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SignedFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapnhatketquakyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CapnhatketquakyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laytrangthaiky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaytrangthaikyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LaytrangthaikyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSYeucauky">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayDSYeucaukyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayDSYeucaukyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayTTTK_NCM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="STT" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayTTTK_NCMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayTTTK_NCMResult" type="tns:clTTTKNCM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clTTTKNCM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaNV" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="STT" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Taikhoan" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckDL" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Dangnhap_Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matkhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dangnhap_TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Dangnhap_TestResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+      <s:element name="clTTTaikhoan" nillable="true" type="tns:clTTTaikhoan" />
+      <s:element name="clThietlapphuongthucky" nillable="true" type="tns:clThietlapphuongthucky" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clTTTKNCM" nillable="true" type="tns:clTTTKNCM" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DangkySoapIn">
+    <wsdl:part name="parameters" element="tns:Dangky" />
+  </wsdl:message>
+  <wsdl:message name="DangkySoapOut">
+    <wsdl:part name="parameters" element="tns:DangkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoTKphienSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoTKphien" />
+  </wsdl:message>
+  <wsdl:message name="TaoTKphienSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoTKphienResponse" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanSoapIn">
+    <wsdl:part name="parameters" element="tns:Kichhoattaikhoan" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanSoapOut">
+    <wsdl:part name="parameters" element="tns:KichhoattaikhoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauSoapIn">
+    <wsdl:part name="parameters" element="tns:Doimatkhau" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauSoapOut">
+    <wsdl:part name="parameters" element="tns:DoimatkhauResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauSoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlapmatkhau" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauSoapOut">
+    <wsdl:part name="parameters" element="tns:ThietlapmatkhauResponse" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapSoapIn">
+    <wsdl:part name="parameters" element="tns:Dangnhap" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapSoapOut">
+    <wsdl:part name="parameters" element="tns:DangnhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanSoapIn">
+    <wsdl:part name="parameters" element="tns:Laythongtintaikhoan" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanSoapOut">
+    <wsdl:part name="parameters" element="tns:LaythongtintaikhoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoVB" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoVBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankySoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlaptaikhoanky" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankySoapOut">
+    <wsdl:part name="parameters" element="tns:ThietlaptaikhoankyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkySoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlapvungky" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkySoapOut">
+    <wsdl:part name="parameters" element="tns:ThietlapvungkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBSoapIn">
+    <wsdl:part name="parameters" element="tns:GuiVB" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBSoapOut">
+    <wsdl:part name="parameters" element="tns:GuiVBResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSSoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlapphuongthuckymobilesign_IDCTS" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSSoapOut">
+    <wsdl:part name="parameters" element="tns:Thietlapphuongthuckymobilesign_IDCTSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialSoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlapphuongthuckymobilesign_Serial" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialSoapOut">
+    <wsdl:part name="parameters" element="tns:Thietlapphuongthuckymobilesign_SerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenSoapIn">
+    <wsdl:part name="parameters" element="tns:Thietlapphuongthuckytoken" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenSoapOut">
+    <wsdl:part name="parameters" element="tns:ThietlapphuongthuckytokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhSoapIn">
+    <wsdl:part name="parameters" element="tns:Laythietlapphuongthuckysomacdinh" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhSoapOut">
+    <wsdl:part name="parameters" element="tns:LaythietlapphuongthuckysomacdinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="PhekySoapIn">
+    <wsdl:part name="parameters" element="tns:Pheky" />
+  </wsdl:message>
+  <wsdl:message name="PhekySoapOut">
+    <wsdl:part name="parameters" element="tns:PhekyResponse" />
+  </wsdl:message>
+  <wsdl:message name="KyVBSoapIn">
+    <wsdl:part name="parameters" element="tns:KyVB" />
+  </wsdl:message>
+  <wsdl:message name="KyVBSoapOut">
+    <wsdl:part name="parameters" element="tns:KyVBResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDSVBDatao" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDSVBDataoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanSoapIn">
+    <wsdl:part name="parameters" element="tns:LayDSVBNhan" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanSoapOut">
+    <wsdl:part name="parameters" element="tns:LayDSVBNhanResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekySoapIn">
+    <wsdl:part name="parameters" element="tns:LayDSVBNhan_pheky" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekySoapOut">
+    <wsdl:part name="parameters" element="tns:LayDSVBNhan_phekyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBSoapIn">
+    <wsdl:part name="parameters" element="tns:LaylogVB" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBSoapOut">
+    <wsdl:part name="parameters" element="tns:LaylogVBResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilename" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilenameResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKySoapIn">
+    <wsdl:part name="parameters" element="tns:TaoYCKy" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKySoapOut">
+    <wsdl:part name="parameters" element="tns:TaoYCKyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakySoapIn">
+    <wsdl:part name="parameters" element="tns:Capnhatketquaky" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakySoapOut">
+    <wsdl:part name="parameters" element="tns:CapnhatketquakyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikySoapIn">
+    <wsdl:part name="parameters" element="tns:Laytrangthaiky" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikySoapOut">
+    <wsdl:part name="parameters" element="tns:LaytrangthaikyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukySoapIn">
+    <wsdl:part name="parameters" element="tns:LayDSYeucauky" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukySoapOut">
+    <wsdl:part name="parameters" element="tns:LayDSYeucaukyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMSoapIn">
+    <wsdl:part name="parameters" element="tns:LayTTTK_NCM" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMSoapOut">
+    <wsdl:part name="parameters" element="tns:LayTTTK_NCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Dangnhap_Test" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestSoapOut">
+    <wsdl:part name="parameters" element="tns:Dangnhap_TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailHttpGetIn">
+    <wsdl:part name="emailnhan" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="CCMail" type="s:string" />
+    <wsdl:part name="tieude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhaucu" type="s:string" />
+    <wsdl:part name="Matkhaumoi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanHttpGetOut">
+    <wsdl:part name="Body" element="tns:clTTTaikhoan" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBHttpGetIn">
+    <wsdl:part name="TenVBGoc" type="s:string" />
+    <wsdl:part name="Vitriluu" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+    <wsdl:part name="phanloaivb" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankyHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Trinhtuky" type="s:string" />
+    <wsdl:part name="Hinhthucky" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkyHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Trinhtuky" type="s:string" />
+    <wsdl:part name="Hinhthucky" type="s:string" />
+    <wsdl:part name="Trangky" type="s:string" />
+    <wsdl:part name="Toadodau" type="s:string" />
+    <wsdl:part name="Toadocuoi" type="s:string" />
+    <wsdl:part name="Mamauvungky" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="taikhoanthuchien" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSHttpGetIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialHttpGetIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenHttpGetIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhHttpGetOut">
+    <wsdl:part name="Body" element="tns:clThietlapphuongthucky" />
+  </wsdl:message>
+  <wsdl:message name="PhekyHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Noidungphe" type="s:string" />
+    <wsdl:part name="Trangphe" type="s:string" />
+    <wsdl:part name="Toadodau" type="s:string" />
+    <wsdl:part name="Toadocuoi" type="s:string" />
+    <wsdl:part name="Vitriluu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PhekyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="KyVBHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Phuongthucky" type="s:string" />
+    <wsdl:part name="trinhtuky" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KyVBHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekyHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBHttpGetIn">
+    <wsdl:part name="idFile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKyHttpGetIn">
+    <wsdl:part name="Code" type="s:string" />
+    <wsdl:part name="Taikhoan" type="s:string" />
+    <wsdl:part name="Linkfile" type="s:string" />
+    <wsdl:part name="Info" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakyHttpGetIn">
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="Status" type="s:string" />
+    <wsdl:part name="SignedFile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikyHttpGetIn">
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="taikhoan" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukyHttpGetIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMHttpGetIn">
+    <wsdl:part name="STT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMHttpGetOut">
+    <wsdl:part name="Body" element="tns:clTTTKNCM" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestHttpGetIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SendMailHttpPostIn">
+    <wsdl:part name="emailnhan" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="CCMail" type="s:string" />
+    <wsdl:part name="tieude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendMailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KichhoattaikhoanHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhaucu" type="s:string" />
+    <wsdl:part name="Matkhaumoi" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DoimatkhauHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapmatkhauHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="Matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DangnhapHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythongtintaikhoanHttpPostOut">
+    <wsdl:part name="Body" element="tns:clTTTaikhoan" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBHttpPostIn">
+    <wsdl:part name="TenVBGoc" type="s:string" />
+    <wsdl:part name="Vitriluu" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+    <wsdl:part name="phanloaivb" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TaoVBHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankyHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Trinhtuky" type="s:string" />
+    <wsdl:part name="Hinhthucky" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlaptaikhoankyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkyHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Trinhtuky" type="s:string" />
+    <wsdl:part name="Hinhthucky" type="s:string" />
+    <wsdl:part name="Trangky" type="s:string" />
+    <wsdl:part name="Toadodau" type="s:string" />
+    <wsdl:part name="Toadocuoi" type="s:string" />
+    <wsdl:part name="Mamauvungky" type="s:string" />
+    <wsdl:part name="Taikhoantao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapvungkyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="taikhoanthuchien" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuiVBHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSHttpPostIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="idcts" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_IDCTSHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialHttpPostIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Thietlapphuongthuckymobilesign_SerialHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenHttpPostIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="macdinh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ThietlapphuongthuckytokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaythietlapphuongthuckysomacdinhHttpPostOut">
+    <wsdl:part name="Body" element="tns:clThietlapphuongthucky" />
+  </wsdl:message>
+  <wsdl:message name="PhekyHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Noidungphe" type="s:string" />
+    <wsdl:part name="Trangphe" type="s:string" />
+    <wsdl:part name="Toadodau" type="s:string" />
+    <wsdl:part name="Toadocuoi" type="s:string" />
+    <wsdl:part name="Vitriluu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PhekyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="KyVBHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+    <wsdl:part name="Taikhoanky" type="s:string" />
+    <wsdl:part name="Phuongthucky" type="s:string" />
+    <wsdl:part name="trinhtuky" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="KyVBHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBDataoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhanHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekyHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSVBNhan_phekyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBHttpPostIn">
+    <wsdl:part name="idFile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaylogVBHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFilenameHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKyHttpPostIn">
+    <wsdl:part name="Code" type="s:string" />
+    <wsdl:part name="Taikhoan" type="s:string" />
+    <wsdl:part name="Linkfile" type="s:string" />
+    <wsdl:part name="Info" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TaoYCKyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakyHttpPostIn">
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="taikhoan" type="s:string" />
+    <wsdl:part name="Status" type="s:string" />
+    <wsdl:part name="SignedFile" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CapnhatketquakyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikyHttpPostIn">
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="taikhoan" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaytrangthaikyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukyHttpPostIn">
+    <wsdl:part name="taikhoan" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayDSYeucaukyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMHttpPostIn">
+    <wsdl:part name="STT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LayTTTK_NCMHttpPostOut">
+    <wsdl:part name="Body" element="tns:clTTTKNCM" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestHttpPostIn">
+    <wsdl:part name="Email" type="s:string" />
+    <wsdl:part name="matkhau" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Dangnhap_TestHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="apiEdocSoap">
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailSoapIn" />
+      <wsdl:output message="tns:SendMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangky">
+      <wsdl:input message="tns:DangkySoapIn" />
+      <wsdl:output message="tns:DangkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoTKphien">
+      <wsdl:input message="tns:TaoTKphienSoapIn" />
+      <wsdl:output message="tns:TaoTKphienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <wsdl:input message="tns:KichhoattaikhoanSoapIn" />
+      <wsdl:output message="tns:KichhoattaikhoanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <wsdl:input message="tns:DoimatkhauSoapIn" />
+      <wsdl:output message="tns:DoimatkhauSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <wsdl:input message="tns:ThietlapmatkhauSoapIn" />
+      <wsdl:output message="tns:ThietlapmatkhauSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <wsdl:input message="tns:DangnhapSoapIn" />
+      <wsdl:output message="tns:DangnhapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <wsdl:input message="tns:LaythongtintaikhoanSoapIn" />
+      <wsdl:output message="tns:LaythongtintaikhoanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <wsdl:input message="tns:TaoVBSoapIn" />
+      <wsdl:output message="tns:TaoVBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <wsdl:input message="tns:ThietlaptaikhoankySoapIn" />
+      <wsdl:output message="tns:ThietlaptaikhoankySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <wsdl:input message="tns:ThietlapvungkySoapIn" />
+      <wsdl:output message="tns:ThietlapvungkySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <wsdl:input message="tns:GuiVBSoapIn" />
+      <wsdl:output message="tns:GuiVBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_IDCTSSoapIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_IDCTSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_SerialSoapIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_SerialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <wsdl:input message="tns:ThietlapphuongthuckytokenSoapIn" />
+      <wsdl:output message="tns:ThietlapphuongthuckytokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <wsdl:input message="tns:LaythietlapphuongthuckysomacdinhSoapIn" />
+      <wsdl:output message="tns:LaythietlapphuongthuckysomacdinhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <wsdl:input message="tns:PhekySoapIn" />
+      <wsdl:output message="tns:PhekySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <wsdl:input message="tns:KyVBSoapIn" />
+      <wsdl:output message="tns:KyVBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <wsdl:input message="tns:LayDSVBDataoSoapIn" />
+      <wsdl:output message="tns:LayDSVBDataoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <wsdl:input message="tns:LayDSVBNhanSoapIn" />
+      <wsdl:output message="tns:LayDSVBNhanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <wsdl:input message="tns:LayDSVBNhan_phekySoapIn" />
+      <wsdl:output message="tns:LayDSVBNhan_phekySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <wsdl:input message="tns:LaylogVBSoapIn" />
+      <wsdl:output message="tns:LaylogVBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <wsdl:input message="tns:GetFilenameSoapIn" />
+      <wsdl:output message="tns:GetFilenameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <wsdl:input message="tns:TaoYCKySoapIn" />
+      <wsdl:output message="tns:TaoYCKySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <wsdl:input message="tns:CapnhatketquakySoapIn" />
+      <wsdl:output message="tns:CapnhatketquakySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <wsdl:input message="tns:LaytrangthaikySoapIn" />
+      <wsdl:output message="tns:LaytrangthaikySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <wsdl:input message="tns:LayDSYeucaukySoapIn" />
+      <wsdl:output message="tns:LayDSYeucaukySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <wsdl:input message="tns:LayTTTK_NCMSoapIn" />
+      <wsdl:output message="tns:LayTTTK_NCMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <wsdl:input message="tns:Dangnhap_TestSoapIn" />
+      <wsdl:output message="tns:Dangnhap_TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="apiEdocHttpGet">
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailHttpGetIn" />
+      <wsdl:output message="tns:SendMailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <wsdl:input message="tns:KichhoattaikhoanHttpGetIn" />
+      <wsdl:output message="tns:KichhoattaikhoanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <wsdl:input message="tns:DoimatkhauHttpGetIn" />
+      <wsdl:output message="tns:DoimatkhauHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <wsdl:input message="tns:ThietlapmatkhauHttpGetIn" />
+      <wsdl:output message="tns:ThietlapmatkhauHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <wsdl:input message="tns:DangnhapHttpGetIn" />
+      <wsdl:output message="tns:DangnhapHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <wsdl:input message="tns:LaythongtintaikhoanHttpGetIn" />
+      <wsdl:output message="tns:LaythongtintaikhoanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <wsdl:input message="tns:TaoVBHttpGetIn" />
+      <wsdl:output message="tns:TaoVBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <wsdl:input message="tns:ThietlaptaikhoankyHttpGetIn" />
+      <wsdl:output message="tns:ThietlaptaikhoankyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <wsdl:input message="tns:ThietlapvungkyHttpGetIn" />
+      <wsdl:output message="tns:ThietlapvungkyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <wsdl:input message="tns:GuiVBHttpGetIn" />
+      <wsdl:output message="tns:GuiVBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_IDCTSHttpGetIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_IDCTSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_SerialHttpGetIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_SerialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <wsdl:input message="tns:ThietlapphuongthuckytokenHttpGetIn" />
+      <wsdl:output message="tns:ThietlapphuongthuckytokenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <wsdl:input message="tns:LaythietlapphuongthuckysomacdinhHttpGetIn" />
+      <wsdl:output message="tns:LaythietlapphuongthuckysomacdinhHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <wsdl:input message="tns:PhekyHttpGetIn" />
+      <wsdl:output message="tns:PhekyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <wsdl:input message="tns:KyVBHttpGetIn" />
+      <wsdl:output message="tns:KyVBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <wsdl:input message="tns:LayDSVBDataoHttpGetIn" />
+      <wsdl:output message="tns:LayDSVBDataoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <wsdl:input message="tns:LayDSVBNhanHttpGetIn" />
+      <wsdl:output message="tns:LayDSVBNhanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <wsdl:input message="tns:LayDSVBNhan_phekyHttpGetIn" />
+      <wsdl:output message="tns:LayDSVBNhan_phekyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <wsdl:input message="tns:LaylogVBHttpGetIn" />
+      <wsdl:output message="tns:LaylogVBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <wsdl:input message="tns:GetFilenameHttpGetIn" />
+      <wsdl:output message="tns:GetFilenameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <wsdl:input message="tns:TaoYCKyHttpGetIn" />
+      <wsdl:output message="tns:TaoYCKyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <wsdl:input message="tns:CapnhatketquakyHttpGetIn" />
+      <wsdl:output message="tns:CapnhatketquakyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <wsdl:input message="tns:LaytrangthaikyHttpGetIn" />
+      <wsdl:output message="tns:LaytrangthaikyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <wsdl:input message="tns:LayDSYeucaukyHttpGetIn" />
+      <wsdl:output message="tns:LayDSYeucaukyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <wsdl:input message="tns:LayTTTK_NCMHttpGetIn" />
+      <wsdl:output message="tns:LayTTTK_NCMHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <wsdl:input message="tns:Dangnhap_TestHttpGetIn" />
+      <wsdl:output message="tns:Dangnhap_TestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="apiEdocHttpPost">
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailHttpPostIn" />
+      <wsdl:output message="tns:SendMailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <wsdl:input message="tns:KichhoattaikhoanHttpPostIn" />
+      <wsdl:output message="tns:KichhoattaikhoanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <wsdl:input message="tns:DoimatkhauHttpPostIn" />
+      <wsdl:output message="tns:DoimatkhauHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <wsdl:input message="tns:ThietlapmatkhauHttpPostIn" />
+      <wsdl:output message="tns:ThietlapmatkhauHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <wsdl:input message="tns:DangnhapHttpPostIn" />
+      <wsdl:output message="tns:DangnhapHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <wsdl:input message="tns:LaythongtintaikhoanHttpPostIn" />
+      <wsdl:output message="tns:LaythongtintaikhoanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <wsdl:input message="tns:TaoVBHttpPostIn" />
+      <wsdl:output message="tns:TaoVBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <wsdl:input message="tns:ThietlaptaikhoankyHttpPostIn" />
+      <wsdl:output message="tns:ThietlaptaikhoankyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <wsdl:input message="tns:ThietlapvungkyHttpPostIn" />
+      <wsdl:output message="tns:ThietlapvungkyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <wsdl:input message="tns:GuiVBHttpPostIn" />
+      <wsdl:output message="tns:GuiVBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_IDCTSHttpPostIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_IDCTSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <wsdl:input message="tns:Thietlapphuongthuckymobilesign_SerialHttpPostIn" />
+      <wsdl:output message="tns:Thietlapphuongthuckymobilesign_SerialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <wsdl:input message="tns:ThietlapphuongthuckytokenHttpPostIn" />
+      <wsdl:output message="tns:ThietlapphuongthuckytokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <wsdl:input message="tns:LaythietlapphuongthuckysomacdinhHttpPostIn" />
+      <wsdl:output message="tns:LaythietlapphuongthuckysomacdinhHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <wsdl:input message="tns:PhekyHttpPostIn" />
+      <wsdl:output message="tns:PhekyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <wsdl:input message="tns:KyVBHttpPostIn" />
+      <wsdl:output message="tns:KyVBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <wsdl:input message="tns:LayDSVBDataoHttpPostIn" />
+      <wsdl:output message="tns:LayDSVBDataoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <wsdl:input message="tns:LayDSVBNhanHttpPostIn" />
+      <wsdl:output message="tns:LayDSVBNhanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <wsdl:input message="tns:LayDSVBNhan_phekyHttpPostIn" />
+      <wsdl:output message="tns:LayDSVBNhan_phekyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <wsdl:input message="tns:LaylogVBHttpPostIn" />
+      <wsdl:output message="tns:LaylogVBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <wsdl:input message="tns:GetFilenameHttpPostIn" />
+      <wsdl:output message="tns:GetFilenameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <wsdl:input message="tns:TaoYCKyHttpPostIn" />
+      <wsdl:output message="tns:TaoYCKyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <wsdl:input message="tns:CapnhatketquakyHttpPostIn" />
+      <wsdl:output message="tns:CapnhatketquakyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <wsdl:input message="tns:LaytrangthaikyHttpPostIn" />
+      <wsdl:output message="tns:LaytrangthaikyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <wsdl:input message="tns:LayDSYeucaukyHttpPostIn" />
+      <wsdl:output message="tns:LayDSYeucaukyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <wsdl:input message="tns:LayTTTK_NCMHttpPostIn" />
+      <wsdl:output message="tns:LayTTTK_NCMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <wsdl:input message="tns:Dangnhap_TestHttpPostIn" />
+      <wsdl:output message="tns:Dangnhap_TestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="apiEdocSoap" type="tns:apiEdocSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangky">
+      <soap:operation soapAction="http://tempuri.org/Dangky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoTKphien">
+      <soap:operation soapAction="http://tempuri.org/TaoTKphien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <soap:operation soapAction="http://tempuri.org/Kichhoattaikhoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <soap:operation soapAction="http://tempuri.org/Doimatkhau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <soap:operation soapAction="http://tempuri.org/Thietlapmatkhau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <soap:operation soapAction="http://tempuri.org/Dangnhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <soap:operation soapAction="http://tempuri.org/Laythongtintaikhoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <soap:operation soapAction="http://tempuri.org/TaoVB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <soap:operation soapAction="http://tempuri.org/Thietlaptaikhoanky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <soap:operation soapAction="http://tempuri.org/Thietlapvungky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <soap:operation soapAction="http://tempuri.org/GuiVB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <soap:operation soapAction="http://tempuri.org/Thietlapphuongthuckymobilesign_IDCTS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <soap:operation soapAction="http://tempuri.org/Thietlapphuongthuckymobilesign_Serial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <soap:operation soapAction="http://tempuri.org/Thietlapphuongthuckytoken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <soap:operation soapAction="http://tempuri.org/Laythietlapphuongthuckysomacdinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <soap:operation soapAction="http://tempuri.org/Pheky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <soap:operation soapAction="http://tempuri.org/KyVB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <soap:operation soapAction="http://tempuri.org/LayDSVBDatao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <soap:operation soapAction="http://tempuri.org/LayDSVBNhan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <soap:operation soapAction="http://tempuri.org/LayDSVBNhan_pheky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <soap:operation soapAction="http://tempuri.org/LaylogVB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <soap:operation soapAction="http://tempuri.org/GetFilename" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <soap:operation soapAction="http://tempuri.org/TaoYCKy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <soap:operation soapAction="http://tempuri.org/Capnhatketquaky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <soap:operation soapAction="http://tempuri.org/Laytrangthaiky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <soap:operation soapAction="http://tempuri.org/LayDSYeucauky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <soap:operation soapAction="http://tempuri.org/LayTTTK_NCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <soap:operation soapAction="http://tempuri.org/Dangnhap_Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiEdocSoap12" type="tns:apiEdocSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangky">
+      <soap12:operation soapAction="http://tempuri.org/Dangky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoTKphien">
+      <soap12:operation soapAction="http://tempuri.org/TaoTKphien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <soap12:operation soapAction="http://tempuri.org/Kichhoattaikhoan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <soap12:operation soapAction="http://tempuri.org/Doimatkhau" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <soap12:operation soapAction="http://tempuri.org/Thietlapmatkhau" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <soap12:operation soapAction="http://tempuri.org/Dangnhap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <soap12:operation soapAction="http://tempuri.org/Laythongtintaikhoan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <soap12:operation soapAction="http://tempuri.org/TaoVB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <soap12:operation soapAction="http://tempuri.org/Thietlaptaikhoanky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <soap12:operation soapAction="http://tempuri.org/Thietlapvungky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <soap12:operation soapAction="http://tempuri.org/GuiVB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <soap12:operation soapAction="http://tempuri.org/Thietlapphuongthuckymobilesign_IDCTS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <soap12:operation soapAction="http://tempuri.org/Thietlapphuongthuckymobilesign_Serial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <soap12:operation soapAction="http://tempuri.org/Thietlapphuongthuckytoken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <soap12:operation soapAction="http://tempuri.org/Laythietlapphuongthuckysomacdinh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <soap12:operation soapAction="http://tempuri.org/Pheky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <soap12:operation soapAction="http://tempuri.org/KyVB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <soap12:operation soapAction="http://tempuri.org/LayDSVBDatao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <soap12:operation soapAction="http://tempuri.org/LayDSVBNhan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <soap12:operation soapAction="http://tempuri.org/LayDSVBNhan_pheky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <soap12:operation soapAction="http://tempuri.org/LaylogVB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <soap12:operation soapAction="http://tempuri.org/GetFilename" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <soap12:operation soapAction="http://tempuri.org/TaoYCKy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <soap12:operation soapAction="http://tempuri.org/Capnhatketquaky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <soap12:operation soapAction="http://tempuri.org/Laytrangthaiky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <soap12:operation soapAction="http://tempuri.org/LayDSYeucauky" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <soap12:operation soapAction="http://tempuri.org/LayTTTK_NCM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <soap12:operation soapAction="http://tempuri.org/Dangnhap_Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiEdocHttpGet" type="tns:apiEdocHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendMail">
+      <http:operation location="/SendMail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <http:operation location="/Kichhoattaikhoan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <http:operation location="/Doimatkhau" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <http:operation location="/Thietlapmatkhau" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <http:operation location="/Dangnhap" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <http:operation location="/Laythongtintaikhoan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <http:operation location="/TaoVB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <http:operation location="/Thietlaptaikhoanky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <http:operation location="/Thietlapvungky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <http:operation location="/GuiVB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <http:operation location="/Thietlapphuongthuckymobilesign_IDCTS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <http:operation location="/Thietlapphuongthuckymobilesign_Serial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <http:operation location="/Thietlapphuongthuckytoken" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <http:operation location="/Laythietlapphuongthuckysomacdinh" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <http:operation location="/Pheky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <http:operation location="/KyVB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <http:operation location="/LayDSVBDatao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <http:operation location="/LayDSVBNhan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <http:operation location="/LayDSVBNhan_pheky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <http:operation location="/LaylogVB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <http:operation location="/GetFilename" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <http:operation location="/TaoYCKy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <http:operation location="/Capnhatketquaky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <http:operation location="/Laytrangthaiky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <http:operation location="/LayDSYeucauky" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <http:operation location="/LayTTTK_NCM" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <http:operation location="/Dangnhap_Test" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="apiEdocHttpPost" type="tns:apiEdocHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendMail">
+      <http:operation location="/SendMail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kichhoattaikhoan">
+      <http:operation location="/Kichhoattaikhoan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doimatkhau">
+      <http:operation location="/Doimatkhau" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapmatkhau">
+      <http:operation location="/Thietlapmatkhau" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap">
+      <http:operation location="/Dangnhap" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythongtintaikhoan">
+      <http:operation location="/Laythongtintaikhoan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoVB">
+      <http:operation location="/TaoVB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlaptaikhoanky">
+      <http:operation location="/Thietlaptaikhoanky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapvungky">
+      <http:operation location="/Thietlapvungky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuiVB">
+      <http:operation location="/GuiVB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_IDCTS">
+      <http:operation location="/Thietlapphuongthuckymobilesign_IDCTS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckymobilesign_Serial">
+      <http:operation location="/Thietlapphuongthuckymobilesign_Serial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thietlapphuongthuckytoken">
+      <http:operation location="/Thietlapphuongthuckytoken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laythietlapphuongthuckysomacdinh">
+      <http:operation location="/Laythietlapphuongthuckysomacdinh" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pheky">
+      <http:operation location="/Pheky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KyVB">
+      <http:operation location="/KyVB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBDatao">
+      <http:operation location="/LayDSVBDatao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan">
+      <http:operation location="/LayDSVBNhan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSVBNhan_pheky">
+      <http:operation location="/LayDSVBNhan_pheky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaylogVB">
+      <http:operation location="/LaylogVB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilename">
+      <http:operation location="/GetFilename" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoYCKy">
+      <http:operation location="/TaoYCKy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Capnhatketquaky">
+      <http:operation location="/Capnhatketquaky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laytrangthaiky">
+      <http:operation location="/Laytrangthaiky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayDSYeucauky">
+      <http:operation location="/LayDSYeucauky" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayTTTK_NCM">
+      <http:operation location="/LayTTTK_NCM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dangnhap_Test">
+      <http:operation location="/Dangnhap_Test" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="apiEdoc">
+    <wsdl:port name="apiEdocSoap" binding="tns:apiEdocSoap">
+      <soap:address location="http://27.71.231.212:8089/apiEdoc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiEdocSoap12" binding="tns:apiEdocSoap12">
+      <soap12:address location="http://27.71.231.212:8089/apiEdoc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiEdocHttpGet" binding="tns:apiEdocHttpGet">
+      <http:address location="http://27.71.231.212:8089/apiEdoc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="apiEdocHttpPost" binding="tns:apiEdocHttpPost">
+      <http:address location="http://27.71.231.212:8089/apiEdoc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

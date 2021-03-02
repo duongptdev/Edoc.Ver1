@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Key="FcMyzm/ms+e3AQDiR2osJCka65Gysk4Hx9AaW+nLYnbtxmKYFaSi5Eyl/Gbk+xN9SZDbFnIcrjiHNoq2nzOaUhvV8j07ssS07ukanIern17ylr6xbN8++b9K/A05gtUxsf/SW1inAnkSwjJfh+JKcv2UHpzka9SMsSVzx3oafZUvX95LDmzsMrqAv2Ig/KFY+QKIeNnutdxeZvsISsNJj/FmgtRVz/x0PkzCd1mqESsawXsR8aSB+uPdNYs4pCcS4imfLFesDlUJ6mjcxLDz5RD65TdK7RnUNMTJOVa0L8dXqOLOGzCd+6hY3jFmzW+bkuZPYFtFtHhP3cQ7nsYV/Qfa47eeDIANsODkFmn/UQhxb6Wm1pFHP4nQcVYily+6s4lLddrAeiBW25BXAf/4C9hPH1cHMbkJMGRIEOJawECJ8Hy6nP7bAtgfK8CDDkGZx8WwUaSBVrdGl6ocM6835Z9JteAPiHek7BLFYx13d5mEIDV16Jl2d2DmX+QOx7XAtlF54C6Fi7F1KwOBeHkH1K7KFKDShpL3P3+M4aYm/j9zZvCd5MADbqzsZDPJn7pWtOa9nQVq+P4vp8pbJbLRsQfRdrs/K3D51nJs0tl4ojrd0CpTh84XunYz1OYP0d+RhymDw8ql7DCM63ST13dzSACFVJH7GMdQN3naW55KPuhJbM9sEKQv+zPIvY/XYtZgeof7CRtsq7AdCv4i6P2PVjoFsbdzH4f6EHAGm8UWHOi3Q9x0uoZRP1NSAe2NN8wgZ41rJ5toFLH+10UBazGYUVBK6Gg6pBVSamG9mKSxrcJHEutNfS/wZ1ZbyfTsrthPudw9zGu7n/M8WsDRt7nyXqCDFZJRDs+6lSk6B7+mdJbtBNmjVuKb1J95sSAkmToXXrgC61T+MZgYmY0D2IhUgRoqtwDmk4OvISG7L7S+4o6ZfGEZQvSwLEjO5YVSu1MhSdAK0B8WA3FTqsD6c7EWALo1fqNEIugDePnipTYPsB2oy3kSCJs0oIjL8m4doxmpTI7QNIlbJXFVOFw8b9IdEdScWFhQMOr7d8lcxsyi/PjXx5X4UUknwK75Oa37BY5N47gEo5obaU5u/DrbAJrzLgdYFmQIAZSuUDM678FFCZQrqyod15txSH5eWbkQbd5aZAWHqbCR+K+hxXhDkWhc3nG39epvMeXLBR6T+1sz8oxXQ42WtbxvNFUi6zmJy0vr+j0XmclYqG7RMcq3rBFEE2uefmzrqEQ9Av8TwI+ZgC8uPZkBntPc5ixkxxO/W0ErZOmVsknxWGhEIAVlf2gTj/MmVTet2PXjii/g4G9mZmfloqeko0q2f4vr8gt087Uq063Uau6MElSja0Z8I7lJtOht4UDFTN3FFvHNxTFg4qI29k+UUxrmVZHkTB3gFaxZSNwRaHFPWHk=" Version="1.3">
+	<Type>Runtime</Type>
+	<Username>JonArbuckle</Username>
+	<Email>jonarbuckle@board4all.biz</Email>
+	<LicensedDate>2021-01-12T00:00:00Z</LicensedDate>
+	<ExpiredDate>2026-01-12T00:00:00Z</ExpiredDate>
+	<Products>
+		<Product>
+			<Name>Spire.Office Platinum</Name>
+			<Version>4.0</Version>
+			<Subscription>
+				<NumberOfPermittedDeveloper>1</NumberOfPermittedDeveloper>
+				<NumberOfPermittedSite>1</NumberOfPermittedSite>
+			</Subscription>
+		</Product>
+	</Products>
+	<Issuer>
+		<Name>JonArbuckle</Name>
+		<Email>Board4all</Email>
+		<Url>http://www.board4all.biz</Url>
+	</Issuer>
+</License>

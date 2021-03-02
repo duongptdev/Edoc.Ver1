@@ -1,0 +1,65 @@
+﻿<%@ Master Language="VB" CodeFile="main.master.vb" Inherits="main" %>
+
+<%@ Register Assembly="DevExpress.Web.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function SignOut() {
+            localStorage.clear();
+            window.location = 'signin.aspx';
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <dx:ASPxPanel ID="TopPanel" runat="server" FixedPosition="WindowTop" ClientInstanceName="TopPanel" Collapsible="true" BackColor="#f1f1f1">
+                <Styles>
+                    <ExpandedPanel CssClass="expandedPanel" />
+                </Styles>
+                <SettingsAdaptivity CollapseAtWindowInnerWidth="580" />
+                <PanelCollection>
+                    <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="img/logoNCM1.png" /></div>
+                            <div class="col-md-10">
+                                <dx:ASPxMenu ID="mMain" ClientInstanceName="HeaderMenu" runat="server" Theme="Moderno" ForeColor="darkblue">
+                                    <Items>
+                                        <dx:MenuItem Text="Danh sách văn bản, tài liệu" Image-IconID="print_profilereport_16x16devav" NavigateUrl="Danhsachyeucau.aspx">
+                                            <Image IconID="print_profilereport_16x16devav"></Image>
+                                        </dx:MenuItem>
+                                           <dx:MenuItem Text="Thiết lập chữ ký" Image-IconID="actions_viewsetting_16x16devav" NavigateUrl="Thietlaptaikhoan.aspx">
+                                            <Image IconID="actions_viewsetting_16x16devav"></Image>
+                                        </dx:MenuItem>
+
+                                            <dx:MenuItem Text="Đổi mật khẩu" Image-IconID="actions_viewsetting_16x16devav" NavigateUrl="doimatkhau.aspx">
+                                            <Image IconID="actions_viewsetting_16x16devav"></Image>
+                                        </dx:MenuItem>
+                                        <dx:MenuItem Text="Đăng xuất" NavigateUrl="javascript:SignOut()" Image-IconID="actions_close_16x16devav">
+                                            <Image IconID="actions_close_16x16devav"></Image>
+                                        </dx:MenuItem>
+                                    </Items>
+                                </dx:ASPxMenu>
+                            </div>
+                        </div>
+                    </dx:PanelContent>
+                </PanelCollection>
+            </dx:ASPxPanel>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
