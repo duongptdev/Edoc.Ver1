@@ -1745,7 +1745,7 @@ body {
 .modal-form {
     position: relative;
     z-index: 3;
-    display: none;
+    display: block;
     overflow: hidden;
     -webkit-box-pack: center;
     -webkit-justify-content: center;

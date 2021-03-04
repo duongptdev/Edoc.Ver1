@@ -364,7 +364,7 @@
                 </div>
                 <div class="add-receiver-button remove-margin">
                     <a href="../upload-file.html" class="back-button w-button">Quay lại</a>
-                    <a href="../multiple-signatures/review-and-send.html" class="next-button w-button">Tiếp tục (78/90)</a>
+                    <a href="MultipleReviewAndSend.aspx" class="next-button w-button">Tiếp tục (78/90)</a>
                 </div>
             </div>
         </div>
